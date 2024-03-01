@@ -1,4 +1,32 @@
-Domain to IP Resolver
+# Ip to domain resolver
+
+## Overview
+The Reverse DNS Lookup Tool is a Python script designed to perform reverse DNS lookups on multiple IP addresses concurrently. Given a list of IP addresses in a text file, the tool queries the DNS for each IP address to find its associated hostname. The results are then saved to a specified output file, with each IP address and its corresponding DNS name separated by a comma.
+
+## Installation
+
+### Prerequisites
+- Python 3.6 or higher
+- Access to the `dig` command from the `dnsutils` package (Linux) or equivalent in other operating systems.
+
+### Setup
+No additional Python packages are required as the script uses the standard library modules `argparse`, `subprocess`, and `threading`.
+
+## Usage
+
+- `--file` specifies the path to the input file containing the list of IP addresses, one per line.
+- `--output` specifies the path to the output file where the results will be saved.
+
+### Example
+
+To run the tool with `ip_list.txt` as the input file and save the results to `results.txt`, use the following command:
+
+```bash
+python reverse_dns_lookup.py --file ip_list.txt --output results.txt
+```
+This will perform reverse DNS lookups on all IP addresses listed in `ip_list.txt` and save the results to `results.txt`, with each result separated by a comma.
+
+# Domain to IP Resolver
 
 This Python script resolves domain names to IP addresses. It reads a list of domains from a file, resolves each to its corresponding IP address, and optionally saves the results to a CSV file.
 Requirements
