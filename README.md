@@ -22,7 +22,7 @@ No additional Python packages are required as the script uses the standard libra
 To run the tool with `ip_list.txt` as the input file and save the results to `results.txt`, use the following command:
 
 ```bash
-python reverse_dns_lookup.py --file ip_list.txt --output results.txt
+python dig_ip.py --file ip_list.txt --output results.txt
 ```
 This will perform reverse DNS lookups on all IP addresses listed in `ip_list.txt` and save the results to `results.txt`, with each result separated by a comma.
 
